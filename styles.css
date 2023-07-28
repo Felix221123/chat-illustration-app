@@ -65,7 +65,7 @@ body{
 /* mobile first workflow */
 .background-image-fall-1{
     width: 100%;
-    height: 90%;
+    height: 80%;
     background: var(--chat-on-the-left-color);
     z-index: 0;
     position: fixed;
@@ -76,14 +76,15 @@ body{
 }
 
 .background-image-fall-2{
-    width:30%;
-    height: 70%;
+    width:20%;
+    height: 80%;
     background: var(--chat-on-the-left-color);
     position: fixed;
     bottom: 0;
     right: 0;
     opacity: 0.05;
-    border-top-left-radius:100% ;
+    border-top-left-radius:40rem;
+    
 }
 
 
@@ -433,7 +434,7 @@ body{
         text-align: center;
         margin-top: 1.5rem;
         margin-bottom: 2rem;
-        padding: 0rem 2rem;
+        padding: 0rem 1.6rem;
         line-height: 1.9rem;
         font-size: 1.1rem;
         color:var(--paragraph-color);
