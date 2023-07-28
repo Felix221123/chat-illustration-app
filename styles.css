@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+/* css vaiables declared here */
+:root{
+    --font-style:'Rubik', sans-serif;
+    --fw-light:400;
+    --fw-reg:500;
+    --fw-bold:700;
+
+    --sub-heading-at-the-top-of-the-app-UI:hsl(276, 100%, 81%);
+    --chat-on-the-left-color:hsl(276, 55%, 52%);
+    --chat-on-the-right-color:hsl(271, 15%, 43%);
+    --placeholder-text-color:hsl(206, 6%, 79%);
+    --main-heading-color:hsl(271, 36%, 24%);
+    --paragraph-color:hsl(270, 7%, 64%);
+    --background-color-for-emp:hsla(206, 6%, 79%, 0.3);
+
+    --linear-gradient-colors-used-in-profile-background:linear-gradient(
+        to right,
+        hsl(264, 100%, 61%),
+        hsl(293, 100%, 63%)
+    );
+    --linear-gradient-color-used-as-background-image:linear-gradient(
+        to bottom,
+        hsl(293, 100%, 63%),
+        hsl(264, 100%, 61%)
+    );
+    --linear-gradient-color-used-in-text-radio-background:linear-gradient(
+        to right,
+        hsl(293, 100%, 63%),
+        hsl(264, 100%, 61%)
+    );
+
+    --white-color:hsl(0, 0%, 100%);
+    --app-background:hsl(270, 20%, 96%);
+    --submit-button-backrgound:hsl(271, 36%, 24%);
+    --radio-button-outline-color:hsl(289, 100%, 72%);
+
+
+}
+
+
+/* css reset */
+html, 
+body{
+    width: 100%;
+    height: 100%;
+    box-sizing:border-box;
+}
+body{
+    font-family: var(--font-style);
+    position: relative;
+}
+
+*, *::before , *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing:inherit;
+}
+
+*{
+    font: inherit;
+}
+
+/* mobile first workflow */
+.background-image-fall-1{
+    width: 100%;
+    height: 90%;
+    background: var(--chat-on-the-left-color);
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;  
+}
+
+.background-image-fall-2{
+    width:30%;
+    height: 70%;
+    background: var(--chat-on-the-left-color);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    opacity: 0.05;
+    border-top-left-radius:100% ;
+}
+
+
+/* header section of the phone */
+.chat-illustration-on-phone-with-explanations-flex{
+    display: flex;
+    flex-direction: column;
+    
+}
+.chat-illustration-on-phone-white-color-shaped{
+    width:20rem;
+    height: 40rem;
+    background-color: var(--white-color);
+    border-radius: 2.5rem;
+    padding: 0.6rem;
+    margin: 1rem auto;
+    z-index: 2;
+    box-shadow: 0px 20px 40px var(--placeholder-text-color);
+}
+
+.chat-illustration-phone-background{
+    width: 100%;
+    height: 100%;
+    background-color: var(--app-background);
+    border-radius: 2.3rem;
+    border:none;
+}
+
+.heading-with-profile-box{
+    width: 100%;
+    height: 13%;
+    border-top-left-radius:2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    background: var(--linear-gradient-colors-used-in-profile-background);
+    font-size: 0.3rem;
+    border: none;
+}
+.white-row-shaped-inside-heading-top{
+    width:55%;
+    height: 30%;
+    position: relative;
+    top: 0;
+    margin: 0rem auto;
+    border-radius: 0rem 0rem 1.2rem 1.2rem;
+    border: none;
+    background-color: var(--white-color);
+}
+
+.profile-with-roll-with-rollback-button-and-three-dots-options{
+    width: 85%;
+    margin: 0.7rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0.1rem ;
+    
+}
+
+.profile-with-roll-with-rollback-button{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    column-gap: 0.6rem;
+    
+    
+}
+
+.roll-back-button {
+    & div.roller-a{
+        width: 1.5px;
+        height: 6px;
+        background-color: white;
+        border-radius: 2rem;
+        transform: rotateZ(25deg);
+        position: relative;
+        top: 0;
+        left: 0.1px;
+    }
+
+    & div.roller-b{
+        width: 1.5px;
+        height: 6px;
+        background-color: white;
+        border-radius:2rem;
+        transform:rotateZ(-29deg);
+        position: relative;
+        bottom: 1px;
+    
+    }
+}
+
+.profile-with-pic-name-and-availability{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.6rem;
+
+    & .member-profile-picture{
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius:50%;
+        border: 1px solid var(--white-color);
+
+    }
+
+    & .profile-name-and-availability{
+        display: block;
+        line-height: 1rem;
+
+        & .profile-name{
+            color: var(--white-color);
+            font-weight: var(--fw-reg);
+            font-size: 0.9rem;
+        }
+        & .availability-for-bookings{
+            color: var(--white-color);
+            font-size: 0.6rem;
+            font-weight: var(--fw-light);
+            opacity: 0.7;
+        }
+    }
+
+}
+
+.three-dots-options{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.06rem;
+    justify-content: center;
+
+    & div {
+        width: 0.1rem;
+        height: 0.1rem;
+        background-color: white;
+        border-radius: 50%;
+
+    }
+}
+
+/* chat section for the phone */
+
+.messege-section{
+    margin-top: 0.1rem;
+    padding: 0.6rem;
+
+    & .emp-box-1{
+        --background-color-for-emp:hsla(206, 6%, 79%, 0.3);
+        width: 60%;
+        height: 3rem;
+        background-color: var(--background-color-for-emp);
+        border-radius: 1rem 1rem 1rem 0.5rem; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 1rem 0.5rem 0.5rem;
+    }
+
+    & .emp-box-2{
+        --background-color-for-emp:hsla(206, 6%, 79%, 0.3);
+        width: 60%;
+        height: 3rem;
+        margin-top: 0.7rem;
+        background-color: var(--background-color-for-emp);
+        border-radius: 1rem 1rem 1rem 0.5rem; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0.5rem;
+    }
+}
+
+.emp-message-details{
+    font-size: 0.7rem;
+    color: var(--chat-on-the-left-color);
+}
+
+.ctm-box-1{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+
+    & .dog-images-style{
+        width: 3.3rem;
+        height: 3.3rem;
+        border-radius: 1rem;
+        margin-left: 0.6rem;
+    }
+}
+
+
+.ctm-boxing-flex-end{
+    display: flex;
+    justify-content: flex-end;
+
+    & .ctm-box-2{
+        width: 60%;
+        height: 2.7rem;
+        background-color: var(--white-color);
+        margin-top: 0.7rem;
+        padding: 0.5rem 0.4rem 0.6rem 0.55rem;
+        border-radius: 1rem 1rem 0.5rem 1rem;
+        box-shadow: 0px 10px 20px var(--placeholder-text-color);
+    
+        & .ctm-first-msg{
+            font-size: 0.7rem;
+            color: var(--chat-on-the-right-color);
+        }
+        
+    }
+
+    & .ctm-box-3{
+        width: 40%;
+        height: 2rem;
+        background-color: var(--white-color);
+        border-radius:1rem 1rem 0.5rem 1rem;
+        margin-top: 0.7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 10px 20px var(--placeholder-text-color);
+
+        & .ctm-second-msg{
+            font-size: 0.7rem;
+            color: var(--chat-on-the-right-color);
+        }
+    }
+    
+}
+
+.emp-box-3 {
+    width: 63%;
+    height: 3.5rem;
+    background-color: var(--background-color-for-emp);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0.8rem;
+    border-radius: 1rem 1rem 1rem 0.5rem;
+}
+
+.emp-box-4 , .emp-box-5{
+    width: 74%;
+    height: 2.5rem;
+    background: var(--linear-gradient-color-used-in-text-radio-background);
+    margin-top: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 1.3rem 0.4rem 0.8rem;
+    border-radius: 0.8rem 0.8rem 0.8rem 0.5rem;
+
+
+    & .radio-check-in-for-long-to-walk{
+        /* background-color: grey; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .radio-button{
+            width: 1rem;
+            height: 1rem;
+            border: 1px solid var(--white-color);
+            border-radius: 50%; 
+            margin-right: 0.6rem;
+        }
+        & .how-long-to-walk{
+            font-size: 0.7rem;
+            color: var(--white-color);
+            font-weight: var(--fw-light);
+        }
+    }
+
+    & .price-details{
+        font-weight: var(--fw-bold);
+        color: var(--white-color);
+    }
+}
+
+.message-input-with-send-button{
+    width: 97%;
+    height: 3rem;
+    background-color: var(--white-color);
+    margin-top: 1.2rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0rem 0.3rem 0rem 1.5rem; 
+
+    & .input-session-type-with-button{
+        & .placeholder-text{
+            font-size: 0.7rem;
+            color: var(--placeholder-text-color);
+        }
+    }
+
+    & .send-button-circle{
+        width: 2.2rem;
+        height: 2.2rem;
+        background-color: var(--submit-button-backrgound);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & div.roll-a{
+            width: 0.2rem;
+            height: 0.6rem;
+            background-color: var(--white-color);
+            border-radius: 2rem;
+            transform: rotateZ(-45deg);
+            position: relative;
+            top: 0.15rem;
+            
+        }
+        & div.roll-b{
+            width: 0.2rem;
+            height: 0.6rem;
+            background-color: var(--white-color);
+            border-radius: 2rem;
+            transform: rotateZ(45deg);
+            position: relative;
+            bottom: 0.15rem;
+        }
+    }
+}
+
+.explanation-heading-paragraph{
+    z-index: 2;
+    & h1{
+        text-align: center;
+        margin-top: 2rem;
+        font-weight: var(--fw-bold);
+        color: var(--main-heading-color);
+        font-size: clamp(2.5rem , 2.8rem , 100% - 4rem);
+    }
+
+    & .paragraph-for-booking{
+        text-align: center;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        padding: 0rem 2rem;
+        line-height: 1.9rem;
+        font-size: 1.1rem;
+        color:var(--paragraph-color);
+    }
+}
